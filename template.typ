@@ -30,15 +30,26 @@
       )
     ],
   )
-  set text(lang: "GB", size: 30pt)
+  set text(lang: "GB", size: 25pt)
 
 
   show heading: it => [
     #set align(center)
     #set text(olive)
     #pad(top: -0.6em, bottom: -0.6em)[#it.body]
-    #line(length: 100%, stroke: 1.5pt + olive)
+    #line(length: if it.depth == 1 { 100% } else { 80% }, stroke: 1.5pt + olive)
   ]
+
+  show bibliography: it => [
+    #set align(center)
+    #set text(size: 16pt)
+    #show heading: set text(size: 35pt)
+    #set align(left)
+    #it
+  ]
+
+  show figure: set text(20pt)
+
 
   set par(leading: 0.3em)
 
