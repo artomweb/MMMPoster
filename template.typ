@@ -10,7 +10,7 @@
   set page(
     paper: "a1",
     flipped: true,
-    margin: (top: 13cm, left: 2cm, right: 2cm, bottom: 2cm),
+    margin: (top: 12cm, left: 2cm, right: 2cm, bottom: 2cm),
     header: [
       #place(
         left,
@@ -19,6 +19,7 @@
       )
       #place(
         top + center,
+        // dx: 140pt,
         dy: 48pt,
         stack(
           dir: ttb,
@@ -30,28 +31,31 @@
       )
     ],
   )
-  set text(lang: "GB", size: 25pt)
+  set text(lang: "GB", size: 21pt)
 
 
   show heading: it => [
     #set align(center)
     #set text(olive)
-    #pad(top: -0.6em, bottom: -0.6em)[#it.body]
+    #pad(top: -0.1em, bottom: -0.8em)[#it.body]
     #line(length: if it.depth == 1 { 100% } else { 80% }, stroke: 1.5pt + olive)
   ]
 
+
   show bibliography: it => [
     #set align(center)
-    #set text(size: 16pt)
+    #set text(size: 13pt)
     #show heading: set text(size: 35pt)
     #set align(left)
     #it
   ]
 
-  show figure: set text(20pt)
+  show figure: set text(18pt)
 
 
-  set par(leading: 0.3em)
+  set par(leading: 0.34em)
+
+  set list(indent: 20pt)
 
   block(
     height: 100%,
