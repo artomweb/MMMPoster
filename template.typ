@@ -31,7 +31,7 @@
       )
     ],
   )
-  set text(lang: "GB", size: 21pt)
+  set text(lang: "GB", size: 20pt)
 
 
   show heading: it => [
@@ -44,7 +44,7 @@
 
   show bibliography: it => [
     #set align(center)
-    #set text(size: 13pt)
+    #set text(size: 16pt)
     #show heading: set text(size: 35pt)
     #set align(left)
     #it
